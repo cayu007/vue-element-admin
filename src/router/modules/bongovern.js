@@ -25,10 +25,10 @@ const tableBonGovern = {
       meta: { title: 'R. Comptes' }
     },
     {
-    path: 'ods',
-    component: () => import('@/views/bongovern/ods/ods'),
-    name: 'ODS',
-    meta: { title: 'ODS' }
+      path: 'ods',
+      component: () => import('@/views/bongovern/ods/ods'),
+      name: 'ODS',
+      meta: { title: 'ODS' }
     },
     {
       path: 'regidors',
@@ -37,7 +37,7 @@ const tableBonGovern = {
       meta: { title: 'Regidors' }
     },
     {
-    path: 'pressupostos',
+      path: 'pressupostos',
       component: () => import('@/views/bongovern/pressupostos/pressupostos'),
       name: 'Pressupostos',
       meta: { title: 'Pressupostos' }
@@ -48,21 +48,22 @@ const tableBonGovern = {
       name: 'Govi',
       meta: { title: 'Govi' }
     },
+    /*
     {
       path: 'analytics',
       component: () => import('@/views/bongovern/analytics/AnalyticsData'),
       name: 'Analytics',
       meta: { title: 'Analytics' }
     },
+    */
     {
       path: 'ajustes-datasets',
       component: () => import('@/views/bongovern/ajustes-datasets/ajustes-datasets'),
       name: 'Ajustes',
       meta: { title: 'Ajustes' }
-    },
+    }
     // Aquí eliminé la ruta duplicada
   ]
 }
 export default tableBonGovern
-
 
