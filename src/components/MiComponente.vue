@@ -1,7 +1,6 @@
 <template>
   <div>
-    <button @click="cargarDatosDePython">Cargar Datos</button>
-    <p v-if="mensaje">{{ mensaje }}</p>
+    <p>{{ mensaje }}</p>
   </div>
 </template>
 
@@ -14,15 +13,22 @@ export default {
       mensaje: ''
     }
   },
+  mounted() {
+    this.obtenerMensaje()
+  },
   methods: {
-    async cargarDatosDePython() {
+    async obtenerMensaje() {
       try {
-        const response = await axios.get('https://apipythondash.azurewebsites.net/hola')
-        this.mensaje = response.data.mensaje
+        const respuesta = await axios.get('http://127.0.0.1:5000/hola-mundo')
+        this.mensaje = respuesta.data
       } catch (error) {
-        console.error('Error al cargar datos de Python:', error)
+        console.error('Error al obtener el mensaje:', error)
       }
     }
   }
 }
 </script>
+
+<style>
+/* Estilos si necesitas */
+</style>

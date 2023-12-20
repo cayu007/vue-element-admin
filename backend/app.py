@@ -1,5 +1,12 @@
-import uvicorn
-from main import app  # Asume que tu aplicación FastAPI está en main.py
+from flask import Flask
+from flask_cors import CORS
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+app = Flask(__name__)
+CORS(app)
+
+@app.route('/hola-mundo')
+def hola_mundo():
+    return 'Hola mundo'
+
+if __name__ == '__main__':
+    app.run()
