@@ -36,7 +36,17 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    before: require('./mock/mock-server.js')
+    before: require('./mock/mock-server.js'),
+        // Agrega esto para configurar el proxy
+        proxy: {
+          '/dev-api': {
+            target: 'http://localhost:5000', // Cambia esto por la URL de tu backend
+            changeOrigin: true,
+            pathRewrite: {
+              '^/dev-api': '' // esto quita '/dev-api' del path
+            }
+          }
+        }
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that

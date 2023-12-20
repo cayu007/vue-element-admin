@@ -19,7 +19,9 @@ export default {
   methods: {
     async obtenerMensaje() {
       try {
-        const respuesta = await axios.get('http://127.0.0.1:5000/hola-mundo')
+        // Usar variable de entorno para la URL base
+        const baseUrl = process.env.VUE_APP_BASE_API || ''
+        const respuesta = await axios.get(`${baseUrl}/hola-mundo`)
         this.mensaje = respuesta.data
       } catch (error) {
         console.error('Error al obtener el mensaje:', error)
