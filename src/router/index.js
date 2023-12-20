@@ -188,8 +188,15 @@ export const asyncRoutes = [
   },
   {
     path: '/datos',
-    name: 'Datos',
-    component: MiComponente
+    component: MiComponente,
+    children: [
+      {
+        path: 'MiComponente',
+        component: () => import('@/components/MiComponente'),
+        name: 'MiComponente',
+        meta: { title: 'Icons', icon: 'icon', noCache: true }
+      }
+    ]
   },
 
   /** when your routing map is too long, you can split it into small modules **/
