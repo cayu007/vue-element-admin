@@ -17,7 +17,7 @@ export default {
   methods: {
     async cargarDatosDePython() {
       try {
-        const response = await axios.get('https://apipythondash.azurewebsites.net/')
+        const response = await axios.get('https://apipythondash.azurewebsites.net/hola')
         this.mensaje = response.data.mensaje
       } catch (error) {
         console.error('Error al cargar datos de Python:', error)

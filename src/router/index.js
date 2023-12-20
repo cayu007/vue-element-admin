@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
+import MiComponente from '@/components/MiComponente.vue'
 Vue.use(Router)
 
 /* Layout */
@@ -185,6 +185,11 @@ export const asyncRoutes = [
         meta: { title: 'Icons', icon: 'icon', noCache: true }
       }
     ]
+  },
+  {
+    path: '/datos',
+    name: 'Datos',
+    component: MiComponente
   },
 
   /** when your routing map is too long, you can split it into small modules **/
