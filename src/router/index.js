@@ -11,6 +11,7 @@ import componentsRouter from './modules/components'
 import chartsRouter from './modules/charts'
 import tableRouter from './modules/table'
 import nestedRouter from './modules/nested'
+import tableBonGovern from './modules/bongovern'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -83,6 +84,7 @@ export const constantRoutes = [
       }
     ]
   },
+  /*
   {
     path: '/documentation',
     component: Layout,
@@ -108,6 +110,7 @@ export const constantRoutes = [
       }
     ]
   },
+  */
   {
     path: '/profile',
     component: Layout,
@@ -185,6 +188,7 @@ export const asyncRoutes = [
   },
 
   /** when your routing map is too long, you can split it into small modules **/
+  tableBonGovern,
   componentsRouter,
   chartsRouter,
   nestedRouter,
